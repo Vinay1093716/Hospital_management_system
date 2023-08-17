@@ -1,0 +1,20 @@
+<h1>Doctors</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Speciality</th>
+<th>Hospital</th>
+</tr>
+</thead>
+<tbody>
+<% @doctors.each do |doctor| %>
+<tr>
+<td><%= doctor.name %></td>
+<td><%= doctor.speciality %></td>
+<td><%= doctor.hospital.name %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to 'New Doctor', new_doctor_path %>

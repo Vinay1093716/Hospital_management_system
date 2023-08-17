@@ -1,0 +1,18 @@
+<h1>Hospitals</h1>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<% @hospitals.each do |hospital| %>
+<tr>
+<td><%= hospital.name %></td>
+<td><%= hospital.location %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to 'New Hospital', new_hospital_path %>

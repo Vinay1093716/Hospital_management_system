@@ -1,0 +1,18 @@
+<h1>New Hospital</h1>
+<%= form_for @hospital do |f| %>
+<div>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<br>
+<br>
+<div>
+<%= f.label :location %>
+<%= f.text_field :location %>
+</div>
+<br>
+<br>
+<%= f.submit 'Create Hospital' %>
+<% end %>
+<br>
+<%= link_to 'Back', hospitals_path %>

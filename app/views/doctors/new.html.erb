@@ -1,0 +1,24 @@
+<h1>New Doctor</h1>
+<%= form_for @doctor do |f| %>
+<div>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</div>
+<br>
+<br>
+<div>
+<%= f.label :speciality %>
+<%= f.text_field :speciality %>
+</div>
+<br>
+<br>
+<div>
+<%= f.label :hospital_id %>
+<%= f.collection_select :hospital_id, Hospital.all, :id, :name %>
+</div>
+<br>
+<br>
+<%= f.submit 'Create Doctor' %>
+<% end %>
+<br>
+<%= link_to 'Back', doctors_path %>
