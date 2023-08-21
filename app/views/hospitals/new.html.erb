@@ -1,18 +1,15 @@
-<h1>New Hospital</h1>
-<%= form_for @hospital do |f| %>
-<div>
-<%= f.label :name %>
-<%= f.text_field :name %>
+<div class="text-center">
+  <h2>New Hospital</h2>
 </div>
-<br>
-<br>
-<div>
-<%= f.label :location %>
-<%= f.text_field :location %>
-</div>
-<br>
-<br>
-<%= f.submit 'Create Hospital' %>
+<%= form_for @hospital,class: 'form-horizontal' do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+  <div class="form-group" >
+    <%= f.label :location %>
+    <%= f.text_field :location, class:"form-control" %>
+  </div>
+  <%= link_to 'Back', hospitals_path, class:"btn btn-success" %>
+  <%= f.submit 'Create Hospital', class:"btn btn-primary" %>
 <% end %>
-<br>
-<%= link_to 'Back', hospitals_path %>

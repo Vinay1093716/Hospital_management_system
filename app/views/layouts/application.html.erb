@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="logo" href="#">
+       <img src="C:\Users\M1093716\Downloads\hospital-building.png" alt="Logo icon">
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="hospitals">hospitals</a></li>
+      <li><a href="doctors">Doctors</a></li>
+      <li><a href="patients">Patients</a></li>
+      <li><a href="appointments">Appointments</a></li>
+    </ul>
+  </div>
+</nav>
+
+  </nav>
+  <div class="container mt-4">
     <%= yield %>
+  </div>
   </body>
 </html>
