@@ -31,8 +31,9 @@ gem "bootstrap-sass"
 
 gem "jquery-rails"
 
-gem "flatpickr"
+gem 'bootstrap-datepicker-rails'
 
+gem 'pry'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

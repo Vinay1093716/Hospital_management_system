@@ -1,0 +1,26 @@
+<div class="text-center">
+  <h1>Patient Information</h1>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Patient Name</th>
+      <th>Patient Age</th>
+      <th>Appointed Doctor</th>
+      <th>Appointment Date&Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @patient.appointments %>
+      <% @patient.appointments.each do |appointment| %>
+        <tr>
+          <td><%= @patient.name %></td>
+          <td><%= @patient.age %></td>
+          <td><%= appointment.doctor.name %></td>
+          <td><%= appointment.appointment_date %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Back', patients_path, class:"btn btn-success" %>

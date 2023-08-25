@@ -4,7 +4,6 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Doctor</th>
       <th>Patient</th>
       <th>Appointment Date</th>
     </tr>
@@ -12,11 +11,10 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
-        <td><%= appointment.doctor.name %></td>
         <td><%= appointment.patient.name %></td>
         <td><%= appointment.appointment_date %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Add Appointment', new_appointment_path,class:"btn btn-success" %>
+<%= link_to 'Add Appointment', new_doctor_appointment_path,class:"btn btn-success" %>

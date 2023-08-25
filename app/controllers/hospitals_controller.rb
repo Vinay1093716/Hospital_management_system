@@ -8,6 +8,11 @@ class HospitalsController < ApplicationController
     @hospital = Hospital.new
   end
 
+  def show
+    @hospital = Hospital.find(params[:id])
+    @doctors = @hospital.doctors
+  end
+
   def create
     @hospital = Hospital.new(hospital_params)
     if @hospital.save

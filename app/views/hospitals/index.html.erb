@@ -6,6 +6,7 @@
     <tr>
       <th>Name</th>
       <th>Location</th>
+      <th>Doctors</th>
     </tr>
   </thead>
   <tbody>
@@ -13,6 +14,7 @@
       <tr>
         <td><%= hospital.name %></td>
         <td><%= hospital.location %></td>
+        <td><%= link_to 'Doctors',hospital_doctors_path(hospital), class: "btn btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>

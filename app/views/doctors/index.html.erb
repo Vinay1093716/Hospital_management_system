@@ -6,7 +6,8 @@
     <tr>
       <th>Name</th>
       <th>Speciality</th>
-      <th>Hospital</th>
+      <th>Appointments</th>
+      <th>Patients</th>
     </tr>
   </thead>
   <tbody>
@@ -14,9 +15,11 @@
       <tr>
         <td><%= doctor.name %></td>
         <td><%= doctor.speciality %></td>
-        <td><%= doctor.hospital.name %></td>
+        <td><%= link_to "Appointments", doctor_appointments_path(doctor), class:"btn btn-primary" %></td>
+        <td><%= link_to "Patients", doctor_patients_path(doctor), class:"btn btn-success" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'New Doctor', new_doctor_path, class:"btn btn-success" %>
+<%= link_to 'Back', hospital_path(@hospital), class: "btn btn-primary" %>
+<%= link_to 'New Doctor', new_hospital_doctor_path, class:"btn btn-success" %>

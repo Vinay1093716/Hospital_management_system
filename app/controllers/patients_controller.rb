@@ -2,10 +2,15 @@ class PatientsController < ApplicationController
 
   def index
     @patients = Patient.all
+    @appointments = Appointment.all
   end
 
   def new
     @patient = Patient.new
+  end
+
+  def show
+    @patient = Patient.find(params[:id])
   end
 
   def create  
@@ -15,6 +20,12 @@ class PatientsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @patient = Patient.find(params[:id])
+    @patient.destroy
+    redirect_to patients_path, notice: "Patient has been deleted."
   end
 
   private

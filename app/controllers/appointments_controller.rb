@@ -11,7 +11,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     if @appointment.save
-      redirect_to appointments_path, notice: "Appointment created for patient"
+      redirect_to doctor_appointments_path, notice: "Appointment created for patient"
     else
       render :new
     end
