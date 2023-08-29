@@ -9,6 +9,10 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.new
   end
 
+  def doctor_patients
+    @doctor = Doctor.find(params[:id])
+  end
+
   def show
     @doctor = Doctor.find(params[:id])
     @hospital = Doctor.find(params[:hospital_id])

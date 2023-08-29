@@ -1,12 +1,13 @@
 class PatientsController < ApplicationController
 
   def index
-    @patients = Patient.all
-    @appointments = Appointment.all
+    @doctor = Doctor.find(params["doctor_id"])
   end
 
   def new
-    @patient = Patient.new
+    binding.pry
+    @doctor = Doctor.find(params["doctor_id"])
+    #@patient = Patient.new
   end
 
   def show
